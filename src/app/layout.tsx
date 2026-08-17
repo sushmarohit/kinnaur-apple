@@ -4,6 +4,7 @@ import { Fraunces, Inter, Noto_Sans_Devanagari } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "@/components/JsonLd";
 import { Providers } from "@/components/Providers";
+import { getSiteUrl } from "@/lib/siteUrl";
 
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
@@ -13,7 +14,7 @@ const notoDevanagari = Noto_Sans_Devanagari({
   display: "swap",
   weight: ["400", "500", "600"],
 });
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

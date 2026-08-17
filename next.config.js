@@ -11,7 +11,7 @@ const nextConfig = {
     ],
   },
   async rewrites() {
-    const api = process.env.API_PROXY_URL ?? "http://localhost:3001";
+    const api = (process.env.API_PROXY_URL || "http://localhost:3001").trim();
     return [{ source: "/api/:path*", destination: `${api}/api/:path*` }];
   },
 };

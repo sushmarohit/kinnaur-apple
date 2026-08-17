@@ -1,8 +1,10 @@
 import { dictionaries } from "@/i18n/dictionaries";
 import { facts } from "@/content/site";
+import { getSiteUrl } from "@/lib/siteUrl";
 
 export function JsonLd() {
   const faqs = dictionaries.en.faq.items;
+  const siteUrl = getSiteUrl();
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -16,7 +18,7 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Kinnaur Apple",
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+    url: siteUrl,
     description: "Orchard-direct seller of GI-tagged Kinnauri apples from Kinnaur, Himachal Pradesh.",
     areaServed: "IN",
     address: { "@type": "PostalAddress", addressRegion: "Himachal Pradesh", addressCountry: "IN" },
