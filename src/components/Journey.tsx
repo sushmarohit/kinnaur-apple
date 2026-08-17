@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { useMotionValueEvent, useReducedMotion, useScroll, useSpring } from "framer-motion";
 import { StagePhotos } from "./StagePhotos";
 import { STORY_STAGES, clamp01, textOpacity } from "@/content/story";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export function Journey() {
   const ref = useRef<HTMLDivElement>(null);
@@ -18,6 +19,8 @@ export function Journey() {
     mass: 0.35,
     restDelta: 0.0004,
   });
+  const { t } = useI18n();
+  const stages = t.journey.stages;
   const [progress, setProgress] = useState(0);
 
   useMotionValueEvent(smooth, "change", (v) => {
@@ -25,17 +28,17 @@ export function Journey() {
   });
 
   return (
-    <section ref={ref} className="relative h-[820vh] bg-[#140c08]">
+    <section ref={ref} id="journey" className="relative h-[820vh] bg-[#140c08]">
       <div className="sticky top-0 h-[100svh] overflow-hidden">
         <StagePhotos progress={progress} />
 
-        <div className="relative z-10 flex h-full max-w-7xl flex-col justify-end px-5 pb-16 pt-24 md:justify-center md:px-12 md:pb-0 lg:px-16">
+        <div className="relative z-10 flex h-full max-w-7xl flex-col justify-end px-5 pb-16 pt-32 md:justify-center md:px-12 md:pb-0 md:pt-28 lg:px-16">
           <p className="mb-6 text-[11px] uppercase tracking-[0.42em] text-[#D89A3E]">
-            Kinnaur · Himachal Pradesh
+            {t.journey.region}
           </p>
 
           <div className="relative min-h-[280px] max-w-xl md:min-h-[320px]">
-            {STORY_STAGES.map((stage, i) => {
+            {stages.map((stage, i) => {
               const o = textOpacity(progress, i);
               const y = (1 - o) * 28;
               return (
@@ -51,7 +54,7 @@ export function Journey() {
                   <p className="text-xs uppercase tracking-[0.32em] text-[#F1B6A8]">{stage.kicker}</p>
                   {i === 0 && (
                     <span className="mt-4 inline-flex rounded-full border border-[#D89A3E]/50 bg-[#D89A3E]/15 px-3 py-1 text-[11px] font-medium text-[#D89A3E]">
-                      GI Tag Registered
+                      {t.journey.giBadge}
                     </span>
                   )}
                   <h1 className="mt-4 font-display text-4xl leading-[1.08] text-[#FBF4E9] md:text-6xl">
@@ -66,7 +69,7 @@ export function Journey() {
                       href="#prebook"
                       className="mt-8 inline-flex rounded-brand bg-primary px-6 py-3 text-sm text-white shadow-soft hover:bg-primary-hover"
                     >
-                      Reserve Your Box
+                      {t.journey.reserve}
                     </a>
                   )}
                 </article>
@@ -81,8 +84,8 @@ export function Journey() {
                 style={{ transform: `scaleX(${progress})` }}
               />
             </div>
-            <ol className="hidden gap-2 sm:flex" aria-label="Story chapters">
-              {STORY_STAGES.map((s, i) => {
+            <ol className="hidden gap-2 sm:flex" aria-label={t.journey.chapters}>
+              {stages.map((s, i) => {
                 const active = textOpacity(progress, i) > 0.45;
                 return (
                   <li

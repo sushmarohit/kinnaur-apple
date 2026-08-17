@@ -1,6 +1,8 @@
-import { faqs, facts } from "@/content/site";
+import { dictionaries } from "@/i18n/dictionaries";
+import { facts } from "@/content/site";
 
 export function JsonLd() {
+  const faqs = dictionaries.en.faq.items;
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

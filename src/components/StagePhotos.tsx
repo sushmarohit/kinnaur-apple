@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { GRADE_STAGE_INDEX, STORY_FRAMES, frameBlend, textOpacity } from "@/content/story";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 type Props = {
   progress: number;
@@ -9,6 +10,7 @@ type Props = {
 };
 
 export function StagePhotos({ progress, className = "" }: Props) {
+  const { t } = useI18n();
   const { from, to, mix } = frameBlend(progress);
   const gi = textOpacity(progress, GRADE_STAGE_INDEX);
 
@@ -79,8 +81,8 @@ export function StagePhotos({ progress, className = "" }: Props) {
       >
         <div className="flex h-28 w-28 items-center justify-center rounded-full border-[3px] border-[#D89A3E] bg-[#FBF4E9]/90 text-center shadow-[0_20px_50px_rgba(0,0,0,0.28)] md:h-36 md:w-36">
           <div>
-            <p className="text-[9px] font-medium tracking-[0.28em] text-primary md:text-[11px]">GI CERTIFIED</p>
-            <p className="mt-1 font-display text-sm text-bark md:text-base">Kinnauri Apple</p>
+            <p className="text-[9px] font-medium tracking-[0.28em] text-primary md:text-[11px]">{t.journey.giStamp}</p>
+            <p className="mt-1 font-display text-sm text-bark md:text-base">{t.journey.giStampSub}</p>
           </div>
         </div>
       </div>

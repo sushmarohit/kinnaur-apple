@@ -48,7 +48,7 @@ export const STORY_STAGES = [
     giBadge: true,
     images: [
       {
-        src: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=2400&q=82",
+        src: "/apple_grade_closeup.png",
         alt: "Close-up of a blush-red apple",
       },
     ] satisfies StoryImage[],
@@ -74,7 +74,7 @@ export const STORY_STAGES = [
     giBadge: false,
     images: [
       {
-        src: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=2400&q=82",
+        src: "/apple_cold_storage.png",
         alt: "Stacked crates in cool storage",
       },
     ] satisfies StoryImage[],
@@ -87,7 +87,7 @@ export const STORY_STAGES = [
     giBadge: false,
     images: [
       {
-        src: "https://images.unsplash.com/photo-1570913149827-d2ac74ab67ab?auto=format&fit=crop&w=2400&q=82",
+        src: "/apple_peti_crate.png",
         alt: "Apples packed in a wooden crate",
       },
     ] satisfies StoryImage[],

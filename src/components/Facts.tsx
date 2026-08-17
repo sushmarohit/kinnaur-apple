@@ -1,34 +1,28 @@
-import { facts } from "@/content/site";
+"use client";
+
+import { useI18n } from "@/i18n/LanguageProvider";
 
 export function Facts() {
+  const { t } = useI18n();
+  const items = [
+    [t.facts.altitude, t.facts.altitudeValue],
+    [t.facts.hangTime, t.facts.hangTimeValue],
+    [t.facts.origin, t.facts.originValue],
+    [t.facts.harvest, t.facts.harvestValue],
+    [t.facts.crates, t.facts.cratesValue],
+    [t.facts.price, t.facts.priceValue],
+  ];
+
   return (
-    <section className="mx-auto max-w-6xl px-5 py-16">
-      <h2 className="font-display text-3xl">Citable facts</h2>
+    <section id="facts" className="scroll-mt-28 mx-auto max-w-6xl px-5 py-16">
+      <h2 className="font-display text-3xl">{t.facts.title}</h2>
       <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <li className="rounded-brand bg-white p-5 shadow-soft">
-          <p className="text-xs uppercase tracking-wide text-accent">Altitude</p>
-          <p className="mt-2 font-display text-2xl">{facts.altitude}</p>
-        </li>
-        <li className="rounded-brand bg-white p-5 shadow-soft">
-          <p className="text-xs uppercase tracking-wide text-accent">On-tree cycle</p>
-          <p className="mt-2 font-display text-2xl">{facts.hangTime}</p>
-        </li>
-        <li className="rounded-brand bg-white p-5 shadow-soft">
-          <p className="text-xs uppercase tracking-wide text-accent">Indication of origin</p>
-          <p className="mt-2 font-display text-2xl">{facts.gi}</p>
-        </li>
-        <li className="rounded-brand bg-white p-5 shadow-soft">
-          <p className="text-xs uppercase tracking-wide text-accent">Harvest window</p>
-          <p className="mt-2 font-display text-2xl">Late August–October</p>
-        </li>
-        <li className="rounded-brand bg-white p-5 shadow-soft">
-          <p className="text-xs uppercase tracking-wide text-accent">Crate sizes</p>
-          <p className="mt-2 font-display text-2xl">{facts.packs.join(" · ")}</p>
-        </li>
-        <li className="rounded-brand bg-white p-5 shadow-soft">
-          <p className="text-xs uppercase tracking-wide text-accent">Price anchor</p>
-          <p className="mt-2 font-display text-2xl">{facts.priceAnchor}</p>
-        </li>
+        {items.map(([label, value]) => (
+          <li key={label} className="rounded-brand bg-white p-5 shadow-soft">
+            <p className="text-xs uppercase tracking-wide text-accent">{label}</p>
+            <p className="mt-2 font-display text-2xl">{value}</p>
+          </li>
+        ))}
       </ul>
     </section>
   );

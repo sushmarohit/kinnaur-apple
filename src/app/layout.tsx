@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Noto_Sans_Devanagari } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "@/components/JsonLd";
-import { SmoothScroll } from "@/components/SmoothScroll";
+import { Providers } from "@/components/Providers";
 
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const notoDevanagari = Noto_Sans_Devanagari({
+  subsets: ["devanagari"],
+  variable: "--font-deva",
+  display: "swap",
+  weight: ["400", "500", "600"],
+});
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
@@ -36,10 +42,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${inter.variable} ${notoDevanagari.variable}`}>
       <body className="font-sans antialiased">
         <JsonLd />
-        <SmoothScroll>{children}</SmoothScroll>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

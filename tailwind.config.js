@@ -13,7 +13,7 @@ module.exports = {
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "var(--font-deva)", "system-ui", "sans-serif"],
       },
       borderRadius: { brand: "10px" },
       boxShadow: { soft: "0 10px 30px rgba(46, 33, 26, 0.08)" },
