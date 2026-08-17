@@ -158,8 +158,9 @@ const en = {
   footer: {
     blurb:
       "GI-tagged Kinnauri apples from Kinnaur, Himachal Pradesh. Grown at 6,000–9,000 ft, hand-graded, packed orchard-direct.",
-    email: "xena.w@example.org",
-    whatsapp: "WhatsApp: +91 98765 43210",
+    email: "thakurrohit210302@gmail.com",
+    whatsapp: "WhatsApp: +91 6230988121",
+    whatsappHref: "https://wa.me/916230988121",
   },
 };
 
@@ -310,8 +311,9 @@ const hi: typeof en = {
   footer: {
     blurb:
       "किन्नौर, हिमाचल प्रदेश के जीआई-टैग किन्नौरी सेब। 6,000–9,000 फीट पर उगे, हाथ से ग्रेड, बाग से सीधे पैक।",
-    email: "xena.w@example.org",
-    whatsapp: "व्हाट्सऐप: +91 98765 43210",
+    email: "thakurrohit210302@gmail.com",
+    whatsapp: "व्हाट्सऐप: +91 6230988121",
+    whatsappHref: "https://wa.me/916230988121",
   },
 };
 

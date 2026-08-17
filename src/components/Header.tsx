@@ -38,19 +38,19 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-bark/10 bg-[#FBF4E9]/92 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[#D4AF37]/40 bg-[#2C0A12] shadow-[0_10px_28px_rgba(44,10,18,0.45)]">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 md:h-[4.25rem] md:px-8">
         <a href="#journey" className="min-w-0 shrink-0">
-          <p className="font-display text-lg leading-none text-primary md:text-xl">{t.header.brand}</p>
-          <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-accent">{t.header.brandKicker}</p>
+          <p className="font-display text-lg leading-none text-[#F1D78A] md:text-xl">{t.header.brand}</p>
+          <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[#D4AF37]">{t.header.brandKicker}</p>
         </a>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label={t.header.brand}>
+        <nav className="hidden items-center gap-7 lg:flex" aria-label={t.header.brand}>
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-bark-muted transition-colors hover:text-bark"
+              className="text-sm font-medium text-[#F8ECD4] transition-colors hover:text-[#F1D78A]"
             >
               {link.label}
             </a>
@@ -60,7 +60,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href="#prebook"
-            className="hidden rounded-brand bg-primary px-4 py-2 text-sm text-white hover:bg-primary-hover sm:inline-flex"
+            className="hidden rounded-brand bg-[#D4AF37] px-4 py-2 text-sm font-semibold text-[#2C0A12] hover:bg-[#E4C36A] sm:inline-flex"
           >
             {t.header.cta}
           </a>
@@ -68,7 +68,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="inline-flex items-center gap-1.5 rounded-full border border-bark/15 bg-white px-3 py-1.5 text-xs font-medium tracking-wide text-bark shadow-soft"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#D4AF37]/70 bg-[#3E101C] px-3 py-1.5 text-xs font-medium tracking-wide text-[#F8ECD4]"
               aria-haspopup="listbox"
               aria-expanded={open}
               aria-label={t.header.language}
@@ -81,7 +81,7 @@ export function Header() {
               <ul
                 role="listbox"
                 aria-label={t.header.language}
-                className="absolute right-0 z-50 mt-2 min-w-[9.5rem] overflow-hidden rounded-brand border border-bark/10 bg-white py-1 shadow-soft"
+                className="absolute right-0 z-50 mt-2 min-w-[9.5rem] overflow-hidden rounded-brand border border-[#D4AF37]/40 bg-[#2C0A12] py-1 shadow-[0_12px_32px_rgba(44,10,18,0.5)]"
               >
                 {locales.map((code) => (
                   <li key={code}>
@@ -91,11 +91,13 @@ export function Header() {
                       aria-selected={locale === code}
                       onClick={() => choose(code)}
                       className={`flex w-full items-center justify-between px-3 py-2 text-left text-sm ${
-                        locale === code ? "bg-cream text-primary" : "text-bark hover:bg-cream"
+                        locale === code
+                          ? "bg-[#3E101C] text-[#F1D78A]"
+                          : "text-[#F8ECD4] hover:bg-[#3E101C] hover:text-[#F1D78A]"
                       }`}
                     >
                       <span>{localeNames[code]}</span>
-                      <span className="tabular-nums text-xs text-bark-muted">{localeLabels[code]}</span>
+                      <span className="tabular-nums text-xs text-[#D4AF37]">{localeLabels[code]}</span>
                     </button>
                   </li>
                 ))}
@@ -105,11 +107,11 @@ export function Header() {
         </div>
       </div>
       <nav
-        className="flex gap-4 overflow-x-auto border-t border-bark/10 px-4 py-2 text-xs text-bark-muted lg:hidden"
+        className="flex gap-4 overflow-x-auto border-t border-[#D4AF37]/25 bg-[#3E101C] px-4 py-2 text-xs font-medium text-[#F8ECD4] lg:hidden"
         aria-label={t.header.brand}
       >
         {links.map((link) => (
-          <a key={link.href} href={link.href} className="shrink-0 hover:text-bark">
+          <a key={link.href} href={link.href} className="shrink-0 hover:text-[#F1D78A]">
             {link.label}
           </a>
         ))}
