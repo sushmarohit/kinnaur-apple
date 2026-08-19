@@ -73,8 +73,8 @@ const en = {
       {
         kicker: "Peti",
         title: "5kg, 10kg or 15kg.",
-        italic: "₹350+/kg.",
-        body: "The branded peti is the unit of sale. Price includes premium packaging and delivery on standard lanes. Pre-booking reserves quantity; it does not charge a card.",
+        italic: "₹300/kg.",
+        body: "The branded peti is the unit of sale. Price is ₹300 per kg, inclusive of packing. Pre-booking reserves quantity; it does not charge a card.",
       },
     ],
   },
@@ -91,7 +91,7 @@ const en = {
     originValue: "GI-tagged Kinnauri Apple, Kinnaur, Himachal Pradesh",
     harvestValue: "Late August–October",
     cratesValue: "5kg · 10kg · 15kg",
-    priceValue: "₹350+/kg, packaging and delivery included",
+    priceValue: "₹300/kg, packing included",
   },
   booking: {
     kicker: "Pre-booking",
@@ -143,7 +143,7 @@ const en = {
       },
       {
         q: "What box sizes can I reserve?",
-        a: "Standard petis are 5kg, 10kg and 15kg. Custom quantities can be requested in the pre-booking form. Pricing is anchored at ₹350+ per kg, inclusive of premium packaging and delivery for standard lanes.",
+        a: "Standard petis are 5kg, 10kg and 15kg. Custom quantities can be requested in the pre-booking form. Pricing is ₹300 per kg.",
       },
       {
         q: "Do I pay online when I pre-book?",
@@ -158,9 +158,9 @@ const en = {
   footer: {
     blurb:
       "GI-tagged Kinnauri apples from Kinnaur, Himachal Pradesh. Grown at 6,000–9,000 ft, hand-graded, packed orchard-direct.",
-    email: "thakurrohit210302@gmail.com",
-    whatsapp: "WhatsApp: +91 6230988121",
-    whatsappHref: "https://wa.me/916230988121",
+    email: "Aloknegi108@gmail.com",
+    whatsapp: "WhatsApp: +91 7807821061",
+    whatsappHref: "https://wa.me/917807821061",
   },
 };
 
@@ -226,8 +226,8 @@ const hi: typeof en = {
       {
         kicker: "पेटी",
         title: "5 किग्रा, 10 किग्रा या 15 किग्रा।",
-        italic: "₹350+/किग्रा।",
-        body: "ब्रांडेड पेटी बिक्री की इकाई है। कीमत में प्रीमियम पैकिंग और मानक मार्गों पर डिलीवरी शामिल है। प्री-बुकिंग मात्रा आरक्षित करती है; कार्ड से भुगतान नहीं लेती।",
+        italic: "₹300/किग्रा।",
+        body: "ब्रांडेड पेटी बिक्री की इकाई है। कीमत ₹300 प्रति किग्रा है, जिसमें पैकिंग शामिल है। प्री-बुकिंग मात्रा आरक्षित करती है; कार्ड से भुगतान नहीं लेती।",
       },
     ],
   },
@@ -244,7 +244,7 @@ const hi: typeof en = {
     originValue: "जीआई-टैग किन्नौरी सेब, किन्नौर, हिमाचल प्रदेश",
     harvestValue: "अगस्त के अंत से अक्टूबर",
     cratesValue: "5 किग्रा · 10 किग्रा · 15 किग्रा",
-    priceValue: "₹350+/किग्रा, पैकिंग और डिलीवरी सहित",
+    priceValue: "₹300/किग्रा",
   },
   booking: {
     kicker: "प्री-बुकिंग",
@@ -296,7 +296,7 @@ const hi: typeof en = {
       },
       {
         q: "कौन-सी पेटी आकार आरक्षित कर सकता हूँ?",
-        a: "मानक पेटियाँ 5 किग्रा, 10 किग्रा और 15 किग्रा हैं। कस्टम मात्रा प्री-बुकिंग फॉर्म में माँग सकते हैं। मूल्य ₹350+ प्रति किग्रा है, जिसमें प्रीमियम पैकिंग और मानक मार्गों पर डिलीवरी शामिल है।",
+        a: "मानक पेटियाँ 5 किग्रा, 10 किग्रा और 15 किग्रा हैं। कस्टम मात्रा प्री-बुकिंग फॉर्म में माँग सकते हैं। मूल्य ₹300 प्रति किग्रा है।",
       },
       {
         q: "प्री-बुकिंग पर क्या मैं ऑनलाइन भुगतान करता हूँ?",
@@ -311,9 +311,9 @@ const hi: typeof en = {
   footer: {
     blurb:
       "किन्नौर, हिमाचल प्रदेश के जीआई-टैग किन्नौरी सेब। 6,000–9,000 फीट पर उगे, हाथ से ग्रेड, बाग से सीधे पैक।",
-    email: "thakurrohit210302@gmail.com",
-    whatsapp: "व्हाट्सऐप: +91 6230988121",
-    whatsappHref: "https://wa.me/916230988121",
+    email: "Aloknegi108@gmail.com",
+    whatsapp: "व्हाट्सऐप: +91 7807821061",
+    whatsappHref: "https://wa.me/917807821061",
   },
 };
 

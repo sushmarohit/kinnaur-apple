@@ -82,8 +82,8 @@ export const STORY_STAGES = [
   {
     kicker: "Peti",
     title: "5kg, 10kg or 15kg.",
-    italic: "₹350+/kg.",
-    body: "The branded peti is the unit of sale. Price includes premium packaging and delivery on standard lanes. Pre-booking reserves quantity; it does not charge a card.",
+    italic: "₹300/kg.",
+    body: "The branded peti is the unit of sale. Price is ₹300 per kg, inclusive of packing. Pre-booking reserves quantity; it does not charge a card.",
     giBadge: false,
     images: [
       {

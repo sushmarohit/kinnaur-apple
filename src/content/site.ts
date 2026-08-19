@@ -17,7 +17,7 @@ export const faqs = [
   },
   {
     q: "What box sizes can I reserve?",
-    a: "Standard petis are 5kg, 10kg and 15kg. Custom quantities can be requested in the pre-booking form. Pricing is anchored at ₹350+ per kg, inclusive of premium packaging and delivery for standard lanes.",
+    a: "Standard petis are 5kg, 10kg and 15kg. Custom quantities can be requested in the pre-booking form. Pricing is ₹300 per kg.",
   },
   {
     q: "Do I pay online when I pre-book?",
@@ -34,6 +34,6 @@ export const facts = {
   hangTime: "130–150 days on the branch",
   origin: "Kinnaur district, Himachal Pradesh, India",
   gi: "Geographical Indication (GI) tagged Kinnauri Apple",
-  priceAnchor: "₹350+/kg inclusive of premium packaging and delivery",
+  priceAnchor: "₹300/kg, packing included",
   packs: ["5kg", "10kg", "15kg"],
 };

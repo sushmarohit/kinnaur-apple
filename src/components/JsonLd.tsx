@@ -38,7 +38,7 @@ export function JsonLd() {
     offers: {
       "@type": "Offer",
       priceCurrency: "INR",
-      price: "350",
+      price: "300",
       availability: "https://schema.org/PreOrder",
       description: facts.priceAnchor,
     },
